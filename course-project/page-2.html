@@ -1,0 +1,406 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>GROUPS</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      /* Container for flexboxes */
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      /* Create four equal columns */
+      .column {
+        flex: 25%;
+        padding: 20px;
+      }
+
+      /* On screens that are 992px wide or less, go from four columns to two columns */
+      @media screen and (max-width: 992px) {
+        .column {
+          flex: 50%;
+        }
+      }
+
+      /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+      @media screen and (max-width: 600px) {
+        .row {
+          flex-direction: column;
+        }
+      }
+
+      .horizontal-nav {
+        transition: all 0.5s ease;
+        padding: 20px 70px 0px 550px;
+        float: right;
+      }
+
+      .horizontal-nav a {
+        transition: all 0.5s ease;
+        display: inline-block;
+        color: #ffffff;
+        margin: 25px 0px;
+        padding: 20px 20px;
+        text-decoration: none;
+      }
+
+      .horizontal-nav a:hover {
+        transition: all 0.5s ease;
+        cursor: pointer;
+        background-color: #cacaca;
+      }
+
+      header {
+        transition: all 0.5s ease;
+        background: linear-gradient(teal, rgba(114, 225, 233, 1));
+        background-size: cover;
+        height: 250px;
+      }
+
+      header a.logo {
+        transition: all 0.5s ease;
+        position: absolute;
+        float: left;
+        display: block;
+        width: 200px;
+        height: 50px;
+        background: url(./assets/images/logo-01.png) no-repeat 0 0;
+        background-size: 200px;
+        top: 50px;
+        left: 50px;
+      }
+
+      header a.logo:hover {
+        transition: all 0.5s ease;
+        opacity: 0.8;
+      }
+
+      .dropdown {
+        transition: all 0.5s ease;
+        position: absolute;
+        display: none;
+        top: 0;
+        right: 0;
+      }
+
+      .dropbtn {
+        transition: all 0.5s ease;
+        background-color: rgba(0, 0, 0, 0.6);
+        color: #ffffff;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+      }
+
+      .dropdown-content {
+        transition: all 0.5s ease;
+        display: none;
+        position: absolute;
+        right: 0px;
+        background-color: rgba(0, 102, 102, 0.8);
+      }
+
+      .dropdown-content a {
+        transition: all 0.5s ease;
+        color: #ffffff;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: center;
+      }
+
+      .dropdown-content a:hover {
+        transition: all 0.5s ease;
+        background-color: #339999;
+      }
+
+      .dropdown:hover .dropdown-content {
+        transition: all 0.5s ease;
+        display: block;
+      }
+
+      .dropdown:hover {
+        transition: all 0.5s ease;
+        background-color: rgba(0, 102, 102);
+      }
+
+      .active-menu-item {
+        transition: all 0.5s ease;
+        border-bottom: 2px solid #339999;
+      }
+
+      body {
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: left;
+      }
+
+      p {
+        line-height: 1.8;
+      }
+
+      .w3-container {
+        margin: 40px 200px;
+        font-size: 16px;
+      }
+
+      div.scroll-container {
+        background-color: white;
+        overflow: auto;
+        white-space: nowrap;
+        padding: 0px;
+        margin-bottom: 20px;
+        border: rgba(0, 0, 0, 0.451) solid 1px;
+      }
+
+      div.scroll-container img {
+        padding: 10px;
+      }
+
+      h2 {
+        padding-top: 120px;
+        font-size: 30px;
+        text-align: center;
+      }
+      h5 {
+        color: white;
+        padding-top: 120px;
+        font-size: 20px;
+        text-align: left;
+      }
+
+      p.w3-container {
+        font-size: 16px;
+        color: black;
+        text-align: center;
+      }
+
+      .button {
+        border: none;
+        color: black;
+        padding: 15px 55px;
+        text-align: center;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 80px;
+        cursor: pointer;
+        border-radius: 35px;
+        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+          0 17px 50px 0 rgba(0, 0, 0, 0.19);
+      }
+
+      .button:hover {
+        opacity: 0.8;
+      }
+
+      #bottom {
+        text-align: center;
+      }
+
+      @media screen and (max-width: 500px) {
+        body {
+          text-align: center;
+        }
+
+        .column {
+          float: right;
+          width: 100%;
+          align-content: center;
+          position: initial;
+        }
+        .button {
+          position: relative;
+          width: 100%;
+        }
+
+        .horizontal-nav {
+          display: none;
+        }
+
+        .dropdown {
+          transition: all 0.5s ease;
+          display: block;
+        }
+
+        .dropdown-content {
+          min-width: 500px;
+        }
+
+        header a.logo {
+          width: 20px;
+        }
+
+        header.travel-page {
+          background: #eee url(./assets/images/logo-01.png) no-repeat center;
+          background-size: cover;
+          height: 100px;
+        }
+
+        header a.logo {
+          position: absolute;
+          background: url(./assets/images/logo-01.png) no-repeat 0 0;
+          background-size: contain;
+          top: 5px;
+          left: 10px;
+        }
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .navbar {
+        overflow: hidden;
+        background-color: #333;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        align-items: center;
+        padding-left: 50px;
+      }
+
+      .navbar a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 15px;
+      }
+
+      .navbar a:hover {
+        background: #f1f1f1;
+        color: black;
+        opacity: 9.8;
+      }
+
+      .navbar a.active {
+        background-color: #04aa6d;
+        color: white;
+      }
+
+      .main {
+        padding: 16px;
+        margin-bottom: 30px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="logo">
+      <a class="logo" href="index.html"></a>
+      <nav>
+        <div class="horizontal-nav">
+          <a href="page-1.html">ABOUT US</a>
+          <a class="active-menu-item" href="page-2.html">GROUPS</a>
+          <a href="page-3.html">PRICING</a>
+          <a href="page-4.html">FAQ</a>
+          <a href="page-5.html">GALLERY</a>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn"><span class="fa fa-bars fa-x"></span></button>
+          <div class="dropdown-content">
+            <a href="page-1.html">ABOUT US</a>
+            <a class="active-menu-item" href="page-2.html">GROUPS</a>
+            <a href="page-3.html">PRICING</a>
+            <a href="page-4.html">FAQ</a>
+            <a href="page-5.html">GALLERY</a>
+          </div>
+        </div>
+      </nav>
+      <div class="column">
+        <h2>GROUPS</h2>
+      </div>
+    </header>
+    <p class="w3-container">
+      Our international trips are opportunities to meet new people while
+      exploring other cultures. Each itinerary is designed to include unique
+      activities and authentic cultural experiences while still giving you
+      plenty of time to explore on your own. In other words, you can do your own
+      thing when you want but still have people to get dinner with at the end of
+      the day. These are not travel groups of the past.
+    </p>
+
+    <div class="row">
+      <div
+        class="column"
+        style="background-image: url(/assets/images/amalfi.jpg)"
+      >
+        <h5>Amalfi Coast | Winter 2024</h5>
+        <p>
+          Our small group trip to the Amalfi Coast and Puglia caters to
+          travelers in their 20s and 30s searching for mouth-watering seafood
+          pasta in Otranto, iconic mountainside scenery in Positano, and
+          delicious Campari cocktails in Capri.
+        </p>
+      </div>
+
+      <div
+        class="column"
+        style="background-image: url(/assets/images/bali.jpg)"
+      >
+        <h5>Bali | Spring 2024</h5>
+        <p>
+          Our small group trip to Indonesia caters to travelers in their 20s and
+          30s looking for cultural immersion in Ubud, tropical adventures in the
+          Gilis, and ribbons of secluded white sand beaches in Uluwatu. These
+          regions are representative of the diversity that exists across this
+          sprawling archipelago, and together, we’ll explore it all.
+        </p>
+      </div>
+
+      <div
+        class="column"
+        style="background-image: url(/assets/images/barcelona.jpg)"
+      >
+        <h5>Barcelona & Nice | Summer 2024</h5>
+        <p>
+          Our small group trip to Barcelona and the South of France caters to
+          travelers in their 20s and 30s looking to savor spectacular French
+          cuisine in Nice, sail catamarans in the Mediterranean, and dance the
+          night away in Barcelona. .
+        </p>
+      </div>
+
+      <div
+        class="column"
+        style="background-image: url(/assets/images/cartagena.jpg)"
+      >
+        <h5>Cartagena | Fall 2024</h5>
+        <p>
+          Our small group trip to Colombia caters to travelers in their 20s and
+          30s searching for history in Cartagena's walled city, delicious fruity
+          cocktails in the Rosario Islands, and ultra-hip coffee culture in
+          Medellin.
+        </p>
+      </div>
+    </div>
+
+    <div class="navbar">
+      <a class="fa fa-instagram"></a>
+      <a class="fa fa-twitter"></a>
+      <a class="fa fa-facebook"></a>
+      <a href="/page-5.html">Privacy Policy</a>
+      <a href="/page-5.html">Terms of Use</a>
+    </div>
+  </body>
+</html>
