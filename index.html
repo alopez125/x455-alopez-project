@@ -5,310 +5,122 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
     <title>Welcome TRAVELERS!</title>
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-      }
 
-      .horizontal-nav {
-        transition: all 0.5s ease;
-        padding: 20px 70px 0px 550px;
-        float: right;
-      }
-
-      .horizontal-nav a {
-        transition: all 0.5s ease;
-        display: inline-block;
-        color: #ffffff;
-        margin: 25px 0px;
-        padding: 20px 20px;
-        text-decoration: none;
-      }
-
-      .horizontal-nav a:hover {
-        transition: all 0.5s ease;
-        cursor: pointer;
-        background-color: #cacaca;
-      }
-
-      header {
-        transition: all 0.5s ease;
-        background: linear-gradient(teal, rgba(114, 225, 233, 1));
-        background-size: cover;
-        height: 600px;
-      }
-
-      header a.logo {
-        transition: all 0.5s ease;
-        position: absolute;
-        float: left;
-        display: block;
-        width: 250px;
-        height: 250px;
-        background: url(./assets/images/logo-01.png) no-repeat 0 0;
-        background-size: contain;
-        top: 50px;
-        left: 50px;
-      }
-
-      header a.logo:hover {
-        transition: all 0.5s ease;
-        opacity: 0.8;
-      }
-
-      .dropdown {
-        transition: all 0.5s ease;
-        position: absolute;
-        display: none;
-        top: 0;
-        right: 0;
-      }
-
-      .dropbtn {
-        transition: all 0.5s ease;
-        background-color: rgba(0, 0, 0, 0.6);
-        color: #ffffff;
-        padding: 16px;
-        font-size: 16px;
-        border: none;
-        cursor: pointer;
-      }
-
-      .dropdown-content {
-        transition: all 0.5s ease;
-        display: none;
-        position: absolute;
-        right: 0px;
-        background-color: rgba(0, 102, 102, 0.8);
-      }
-
-      .dropdown-content a {
-        transition: all 0.5s ease;
-        color: #ffffff;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-        text-align: center;
-      }
-
-      .dropdown-content a:hover {
-        transition: all 0.5s ease;
-        background-color: #339999;
-      }
-
-      .dropdown:hover .dropdown-content {
-        transition: all 0.5s ease;
-        display: block;
-      }
-
-      .dropdown:hover {
-        transition: all 0.5s ease;
-        background-color: rgba(0, 102, 102);
-      }
-
-      .active-menu-item {
-        transition: all 0.5s ease;
-        border-bottom: 2px solid #339999;
-      }
-
-      body {
-        color: white;
-        font-family: Arial, Helvetica, sans-serif;
-        text-align: left;
-      }
-      .column {
-        float: right;
-        width: 50%;
-        align-content: center;
-        position: initial;
-      }
-
-      video {
-        max-width: 100%;
-        height: auto;
-        float: inherit;
-        justify-content: center;
-        padding-top: 40px;
-        padding-left: 60px;
-      }
-
-      h2 {
-        padding-top: 80px;
-        padding-left: 80px;
-        font-size: 30px;
-      }
-
-      p {
-        padding-left: 80px;
-        font-size: 20px;
-      }
-
-      .button {
-        border: none;
-        color: black;
-        background-color: white;
-        padding: 15px 55px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin: 4px 80px;
-        cursor: pointer;
-        border-radius: 35px;
-        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
-          0 17px 50px 0 rgba(0, 0, 0, 0.19);
-      }
-
-      .button:hover {
-        opacity: 0.8;
-      }
-
-      #bottom {
-        text-align: center;
-      }
-
-      @media screen and (max-width: 500px) {
-        body {
-          text-align: center;
-        }
-
-        .column {
-          float: right;
-          width: 100%;
-          align-content: center;
-          position: initial;
-        }
-        .button {
-          position: relative;
-          width: 100%;
-        }
-
-        .horizontal-nav {
-          display: none;
-        }
-
-        .dropdown {
-          transition: all 0.5s ease;
-          display: block;
-        }
-
-        .dropdown-content {
-          min-width: 500px;
-        }
-
-        header a.logo {
-          width: 20px;
-        }
-
-        header.travel-page {
-          background: #eee url(/x455-alopez-project/assets/images/logo-01.png)
-            no-repeat center;
-          background-size: cover;
-          height: 100px;
-        }
-
-        header a.logo {
-          position: absolute;
-          background: url(/x455-alopez-project/assets/assets/images/logo-01.png)
-            no-repeat 0 0;
-          background-size: contain;
-          top: 5px;
-          left: 10px;
-        }
-      }
-      body {
-        margin: 0;
-        font-family: Arial, Helvetica, sans-serif;
-      }
-
-      .navbar {
-        overflow: hidden;
-        background-color: white;
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        padding-left: 50px;
-      }
-
-      .navbar a {
-        float: left;
-        display: block;
-        color: black;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        font-size: 15px;
-      }
-
-      .navbar a:hover {
-        background: #f1f1f1;
-        color: black;
-        opacity: 9.8;
-      }
-
-      .navbar a.active {
-        background-color: #04aa6d;
-        color: black;
-      }
-
-      .main {
-        padding: 16px;
-        margin-bottom: 30px;
-      }
-
-      h3 {
-        text-align: right;
-        color: black;
-        padding-right: 20px;
-        font-size: 12px;
-        font-weight: lighter;
-      }
-    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
+  <body class="bg-gray-100 font-sans">
+    <header
+      class="bg-gradient-to-br from-teal-500 to-cyan-400 min-h-[600px] relative"
+    >
+      <nav class="p-6 md:p-10 flex items-center justify-between">
+        <a
+          href="/"
+          class="block h-24 w-24 md:h-40 md:w-40 bg-contain bg-no-repeat bg-[url('/x455-alopez-project/assets/images/logo-01.png')] -ml-4 md:-ml-8"
+        ></a>
 
-  <body>
-    <header class="logo">
-      <a class="logo" href=""></a>
-      <nav>
-        <div class="horizontal-nav">
-          <a class="active-menu-item" href="page-1.html">ABOUT US</a>
-          <a href="page-2.html">GROUPS</a>
-          <a href="page-3.html">PRICING</a>
-          <a href="page-4.html">FAQ</a>
-          <a href="page-5.html">GALLERY</a>
+        <!-- Desktop Nav -->
+        <div class="hidden md:flex space-x-8 text-white text-lg">
+          <a
+            href="page-1.html"
+            class="p-2 hover:border-b-2 hover:border-white transition-all duration-300"
+            >ABOUT US</a
+          >
+          <a
+            href="page-2.html"
+            class="p-2 hover:border-b-2 hover:border-white transition-all duration-300"
+            >GROUPS</a
+          >
+          <a
+            href="page-3.html"
+            class="p-2 hover:border-b-2 hover:border-white transition-all duration-300"
+            >PRICING</a
+          >
+          <a
+            href="page-4.html"
+            class="p-2 hover:border-b-2 hover:border-white transition-all duration-300"
+            >FAQ</a
+          >
+          <a
+            href="page-5.html"
+            class="p-2 hover:border-b-2 hover:border-white transition-all duration-300"
+            >GALLERY</a
+          >
         </div>
-        <div class="dropdown">
-          <button class="dropbtn"><span class="fa fa-bars fa-x"></span></button>
-          <div class="dropdown-content">
-            <a class="active-menu-item" href="page-1.html">ABOUT US</a>
-            <a href="page-2.html">GROUPS</a>
-            <a href="page-3.html">PRICING</a>
-            <a href="page-4.html">FAQ</a>
-            <a href="page-5.html">GALLERY</a>
+
+        <!-- Mobile Dropdown -->
+        <div class="md:hidden relative group">
+          <button class="text-white text-xl p-3 focus:outline-none">
+            <i class="fa fa-bars"></i>
+          </button>
+          <div
+            class="absolute right-0 mt-2 w-48 bg-gray-800 rounded-md shadow-lg py-2 z-10 hidden group-hover:block"
+          >
+            <a
+              href="page-1.html"
+              class="block px-4 py-2 text-white hover:bg-gray-700"
+              >ABOUT US</a
+            >
+            <a
+              href="page-2.html"
+              class="block px-4 py-2 text-white hover:bg-gray-700"
+              >GROUPS</a
+            >
+            <a
+              href="page-3.html"
+              class="block px-4 py-2 text-white hover:bg-gray-700"
+              >PRICING</a
+            >
+            <a
+              href="page-4.html"
+              class="block px-4 py-2 text-white hover:bg-gray-700"
+              >FAQ</a
+            >
+            <a
+              href="page-5.html"
+              class="block px-4 py-2 text-white hover:bg-gray-700"
+              >GALLERY</a
+            >
           </div>
         </div>
       </nav>
-      <div class="row">
-        <div class="column">
-          <h2>Join a travel group today!</h2>
-          <p>
-            We are a full-service, boutique travel agency with<br />
-            a passion for helping people see the world.
+
+      <!-- Main Content Section -->
+      <div
+        class="flex flex-col md:flex-row items-center justify-center p-6 md:p-12 space-y-8 md:space-y-0 md:space-x-12"
+      >
+        <!-- Right Copy Block (moved to the left for side-by-side) -->
+        <div
+          class="md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left text-white"
+        >
+          <h2 class="text-4xl md:text-5xl font-bold mb-4">
+            Join a travel group today!
+          </h2>
+          <p class="text-lg md:text-xl max-w-md mb-6">
+            We are a full-service, boutique travel agency with a passion for
+            helping people see the world.
           </p>
-          <a class="button" href="page-2.html">EXPLORE GROUPS</a>
+          <a
+            href="page-2.html"
+            class="bg-white text-gray-800 font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-gray-200 transition-colors duration-300"
+          >
+            EXPLORE GROUPS
+          </a>
         </div>
-        <div class="column">
-          <video width="600" height="400" autoplay muted>
+
+        <!-- Left Video Block -->
+        <div class="md:w-1/2">
+          <video
+            width="600"
+            height="400"
+            autoplay
+            muted
+            class="rounded-lg shadow-xl w-full"
+          >
             <source
               src="/x455-alopez-project/assets/videos/movie.mp4"
               type="video/mp4"
@@ -317,34 +129,60 @@
         </div>
       </div>
     </header>
-    <section
-      style="
-        background-color: #f8f8f8;
-        color: #333;
-        padding: 50px 20px;
-        text-align: center;
-      "
-    >
-      <p
-        style="
-          font-size: 20px;
-          max-width: 800px;
-          margin: 0 auto;
-          line-height: 1.6;
-        "
-      >
+
+    <!-- About Section -->
+    <section class="bg-white text-gray-800 py-12 text-center px-6">
+      <p class="text-lg md:text-xl max-w-4xl mx-auto leading-relaxed">
         At Travelight, we believe every journey should be simple, inspiring, and
         unforgettable. Whether you’re exploring with friends, joining one of our
         curated groups, or planning a solo adventure, we’re here to help you
         travel lighter and experience more.
       </p>
     </section>
-    <div class="navbar">
-      <a class="fa fa-instagram"></a>
-      <a class="fa fa-twitter"></a>
-      <a class="fa fa-facebook"></a>
-      <a href="/page-5.html">Privacy Policy</a>
-      <a href="/page-5.html">Terms of Use</a>
+
+    <!-- Fixed Footer -->
+    <div
+      class="fixed bottom-0 left-0 right-0 bg-white shadow-inner flex justify-around items-center px-4 py-2 sm:px-8"
+    >
+      <a
+        href="#"
+        class="text-gray-600 hover:text-gray-900 transition-colors duration-200"
+      >
+        <i class="fa fa-instagram text-xl"></i>
+      </a>
+      <a
+        href="#"
+        class="text-gray-600 hover:text-gray-900 transition-colors duration-200"
+      >
+        <i class="fa fa-twitter text-xl"></i>
+      </a>
+      <a
+        href="#"
+        class="text-gray-600 hover:text-gray-900 transition-colors duration-200"
+      >
+        <i class="fa fa-facebook text-xl"></i>
+      </a>
+      <a
+        href="page-5.html"
+        class="text-gray-600 hover:text-gray-900 transition-colors duration-200 text-sm"
+        >Privacy Policy</a
+      >
+      <a
+        href="page-5.html"
+        class="text-gray-600 hover:text-gray-900 transition-colors duration-200 text-sm"
+        >Terms of Use</a
+      >
     </div>
+
+    <!-- Removed conflicting mobile CSS and added new Tailwind classes to achieve the desired effect -->
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      /* Ensure the fixed footer does not overlap content */
+      body {
+        padding-bottom: 60px;
+      }
+    </style>
   </body>
 </html>
