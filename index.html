@@ -6,7 +6,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Welcome TRAVELERS!</title>
-
+    <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
@@ -17,10 +17,13 @@
     <header
       class="bg-gradient-to-br from-teal-500 to-cyan-400 min-h-[600px] relative"
     >
-      <nav class="p-6 md:p-10 flex items-center justify-between">
+      <!-- Logo and Navigation -->
+      <nav
+        class="p-6 md:p-10 flex items-center justify-between mx-auto max-w-7xl"
+      >
         <a
-          href="/"
-          class="block h-24 w-24 md:h-40 md:w-40 bg-contain bg-no-repeat bg-[url('/x455-alopez-project/assets/images/logo-01.png')] -ml-4 md:-ml-8"
+          href="index.html"
+          class="block h-16 w-48 md:h-20 md:w-64 bg-contain bg-no-repeat bg-[url('./assets/images/logo-01.png')]"
         ></a>
 
         <!-- Desktop Nav -->
@@ -174,11 +177,11 @@
       >
     </div>
 
-    <!-- Removed conflicting mobile CSS and added new Tailwind classes to achieve the desired effect -->
     <style>
       body {
         font-family: Arial, Helvetica, sans-serif;
       }
+
       /* Ensure the fixed footer does not overlap content */
       body {
         padding-bottom: 60px;
